@@ -85,6 +85,7 @@
                     property is true
                 -->
                 <skipTests>${skip.integration.tests}</skipTests>
+				 <excludedGroups>com.mycompany.app.TestApp</excludedGroups>
             </configuration>
         </execution>
     </executions>
