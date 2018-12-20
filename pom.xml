@@ -79,7 +79,7 @@
             </goals>
             <configuration>
 			 <excludes>
-            <exclude>**/TestApp*.java</exclude>
+            <exclude>TestApp.java</exclude>
         </excludes>
                 <!--
                     Skips integration tests if the value of skip.integration.tests
