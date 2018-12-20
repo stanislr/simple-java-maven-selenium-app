@@ -60,7 +60,7 @@
             <exclude>**/IT*</exclude>
         </excludes>
                -->
-              
+               <excludedGroups>com.mycompany.app.ITHtmlUnitBrowser</excludedGroups>
         </configuration>
       </plugin>
       
