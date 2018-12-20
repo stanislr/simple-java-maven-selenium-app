@@ -56,9 +56,10 @@
                          <include>Test*</include>
               </includes>           
 
-		  <excludes>
+	  <!--   <excludes>
             <exclude>**/IT*</exclude>
         </excludes>
+               -->
               
         </configuration>
       </plugin>
