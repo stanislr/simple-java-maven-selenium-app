@@ -79,7 +79,7 @@
             Failsafe Maven plugin
         -->
         <execution>
-            <id>integration-tests</id>
+            <phase>integration-tests</phase>
             <goals>
                 <goal>integration-test</goal>
                 <goal>verify</goal>
