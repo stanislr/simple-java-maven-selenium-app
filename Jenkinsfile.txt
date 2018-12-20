@@ -15,9 +15,15 @@ pipeline {
             steps {
                 sh 'mvn test'
             }
+            post {
+                always {
+                    junit 'target/surefire-reports/*.xml'
+                }
+            }
+        }
 		stage('SystemTest') {
             steps {
-                sh 'mvn verify -P integration-test'
+				sh 'mvn verify -P integration-test'
             }
             post {
                 always {
@@ -31,5 +37,4 @@ pipeline {
             }
         }
     }
-}
 }
