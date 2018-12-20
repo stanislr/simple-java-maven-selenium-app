@@ -51,43 +51,30 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.22.0</version>
-		<configuration>    
-        	<!-- <includes>			
+      <!--   <configuration>    
+        	<includes>			
                          <include>Test*</include>
               </includes>           
- -->
+
 	  <excludes>
-            <exclude>**/*ITHtmlUnitBrowser.java</exclude>
+            <exclude>**/IT*</exclude>
         </excludes>
           
-        </configuration> 
+        </configuration> -->
       </plugin>
-      </build>
-	  
-      <profiles>
-	  <profile>
-	  <id>Integration</id>
-	  <build>
-	  <plugins>
-	  
+      
+      
       <plugin>
     <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-plugin</artifactId>
-    <version>2.22.0</version>
-	<configuration>
-	 <excludes>
-            <exclude>**/TestApp*</exclude>
-        </excludes>
-		</configuration>
+    <artifactId>maven-failsafe-plugin</artifactId>
+    <version>2.18</version>
     <executions>
-	</plugin>
-	</plugins>
         <!--
             Invokes both the integration-test and the verify goals of the
             Failsafe Maven plugin
         -->
         <execution>
-            <phase>integration-tests</phase>
+            <id>integration-tests</id>
             <goals>
                 <goal>integration-test</goal>
                 <goal>verify</goal>
@@ -97,13 +84,10 @@
                     Skips integration tests if the value of skip.integration.tests
                     property is true
                 -->
-               <!--  <skipTests>${skip.integration.tests}</skipTests> -->
+                <skipTests>${skip.integration.tests}</skipTests>
 				 <excludes>
-            <exclude>**/TestApp*</exclude>
+            <exclude>**/Test*</exclude>
         </excludes>
-		<includes>			
-                         <include>**/*ITHtmlUnitBrowser.java</include>
-              </includes> 
             </configuration>
         </execution>
     </executions>
@@ -112,8 +96,8 @@
 
 
  
-<!-- <!-- </plugin>
+</plugin>
       
-    </plugins> -->
+    </plugins>
   </build>
 </project>
