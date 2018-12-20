@@ -23,7 +23,7 @@ pipeline {
         }
 		stage('SystemTest') {
             steps {
-				sh 'mvn verify -P integration-test'
+				sh 'mvn -Dtest=ITHtmlUnitBrowser test'
             }
             post {
                 always {
