@@ -56,10 +56,10 @@
                          <include>Test*</include>
               </includes>           
 
-	  <!--   <excludes>
+	  <excludes>
             <exclude>**/IT*</exclude>
         </excludes>
-               -->
+           
              
         </configuration>
       </plugin>
@@ -85,7 +85,7 @@
                     Skips integration tests if the value of skip.integration.tests
                     property is true
                 -->
-                <skipTests>true</skipTests>
+                <skipTests>${skip.integration.tests}</skipTests>
             </configuration>
         </execution>
     </executions>
