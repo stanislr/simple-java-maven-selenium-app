@@ -60,7 +60,7 @@
             <exclude>**/IT*</exclude>
         </excludes>
                -->
-               <excludedGroups>com.mycompany.app.ITHtmlUnitBrowser</excludedGroups>
+             
         </configuration>
       </plugin>
       
@@ -85,7 +85,7 @@
                     Skips integration tests if the value of skip.integration.tests
                     property is true
                 -->
-                <skipTests>${skip.integration.tests}</skipTests>
+                <skipTests>true</skipTests>
             </configuration>
         </execution>
     </executions>
