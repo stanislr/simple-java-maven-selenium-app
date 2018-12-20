@@ -66,8 +66,13 @@
       
       <plugin>
     <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-failsafe-plugin</artifactId>
-    <version>2.18</version>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>2.22.0</version>
+	<configuration>
+	 <excludes>
+            <exclude>**/TestApp*</exclude>
+        </excludes>
+		</configuration>
     <executions>
         <!--
             Invokes both the integration-test and the verify goals of the
