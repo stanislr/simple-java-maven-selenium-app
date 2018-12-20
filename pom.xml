@@ -58,21 +58,10 @@
 
 	  <excludes>
             <exclude>**/IT*</exclude>
+			<exclude>**/Test*</exclude>
         </excludes>
-           
-             
+          
         </configuration>
-		
-		<configuration>
-                <!--
-                    Skips integration tests if the value of skip.integration.tests
-                    property is true
-                -->
-                <skipTests>${skip.integration.tests}</skipTests>
-            </configuration>
-		
-		
-		
       </plugin>
       
       
@@ -91,7 +80,6 @@
                 <goal>integration-test</goal>
                 <goal>verify</goal>
             </goals>
-			
             <configuration>
                 <!--
                     Skips integration tests if the value of skip.integration.tests
@@ -99,16 +87,13 @@
                 -->
                 <skipTests>${skip.integration.tests}</skipTests>
             </configuration>
-			
         </execution>
     </executions>
 
- <!-- <configuration>
-<excludes>
-            <exclude>**/Test*</exclude>
-        </excludes>
- </configuration>
-  -->
+
+
+
+ 
 </plugin>
       
     </plugins>
