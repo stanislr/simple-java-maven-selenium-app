@@ -15,7 +15,7 @@ pipeline {
             steps {
                 sh 'mvn test'
             }
-	stage('SystemTest') {
+		stage('SystemTest') {
             steps {
                 sh 'mvn verify -P integration-test'
             }
@@ -31,4 +31,5 @@ pipeline {
             }
         }
     }
+}
 }
