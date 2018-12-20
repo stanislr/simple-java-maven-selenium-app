@@ -23,7 +23,6 @@ pipeline {
         }
 		stage('SystemTest') {
             steps {
-				sh 'package -Dmaven.test.skip=true'
 				sh 'mvn verify -P integration-test'
             }
             post {
