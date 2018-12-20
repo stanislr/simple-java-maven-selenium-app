@@ -58,7 +58,6 @@
 
 	  <excludes>
             <exclude>**/IT*</exclude>
-			<exclude>**/Test*</exclude>
         </excludes>
           
         </configuration>
